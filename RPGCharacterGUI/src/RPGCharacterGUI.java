@@ -76,7 +76,7 @@ String Math = round.format (inputNum1 * .5 + inputnum2*.5 +inputnum3*.5 + inputn
             results.setText("\nHe get girls =" + inputNum1 * .5 + " " +
                     "Charcater is mad buff fr = " +inputnum2 * .5 + " " +
                     "He is cool for real = " + inputnum3 * .5 + " " +
-                    "Hes Fater then Usain Bolt = " + inputnum4 * .5 + " Out of 10 your battle stat is. 10/" + Math);
+                    "Hes Fater then Usain Bolt = " + inputnum4 * .5 + " Out of 10 your battle stat is. " + Math + "/10");
 
 
 

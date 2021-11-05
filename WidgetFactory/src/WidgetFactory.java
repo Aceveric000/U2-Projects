@@ -1,10 +1,7 @@
-import javafx.beans.binding.Bindings;
-
 import javax.swing.JOptionPane;
 import java.text.DecimalFormat;
 
 public class WidgetFactory {
-    private static Bindings round;
 
 
     /*
