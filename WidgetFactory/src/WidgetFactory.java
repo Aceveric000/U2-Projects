@@ -1,4 +1,11 @@
+import javafx.beans.binding.Bindings;
+
+import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+
 public class WidgetFactory {
+    private static Bindings round;
+
 
     /*
     Lessons L1 - L3
@@ -24,8 +31,56 @@ public class WidgetFactory {
      Number of Widgets: 1000
      # of Days: 7
      Cost of Widgets: $10,000.00
-     Cost of Production: $9,240.00
+     Cost of Production4: $9,240.00
      Profit: $760.00
 
      */
+
+
+    public static void main(String[] args) {
+        double machine = Integer.parseInt(JOptionPane.showInputDialog("Num of widgets "));
+        double days = Integer.parseInt(JOptionPane.showInputDialog("  how many days did you work?"));
+
+
+        JOptionPane.showMessageDialog(null,
+                "\nThe widgets made are. " + Cost(machine)
+                + "\nDays worked. " + hours(days)
+                +"\nLabor cost. " + production(days) +
+                        "\nThe widgets cost " + CostWidgets(machine) +
+        "\nTotal profit is. " + profit(days, machine));
+
+
+    }
+
+    public static String Cost(double machine) {
+        DecimalFormat round = new DecimalFormat("$#.00");
+
+        return round.format(machine * 10);
+    }
+
+    public static String hours(double days) {
+        DecimalFormat round = new DecimalFormat("#");
+        return round.format (days);
+    }
+
+    public static String production(double days) {
+        DecimalFormat round = new DecimalFormat("$#.00");
+        return round.format (16.5 * days * 16 * 5);
+
+    }
+
+    public static String CostWidgets(double machine) {
+        DecimalFormat round = new DecimalFormat("$#.00");
+
+        return round.format(machine * 10 );
+    }
+
+    public static String profit(double days , double machine) {
+        DecimalFormat round = new DecimalFormat("$#.00");
+
+        double mathOne = (16.5 * days * 16 * 5);
+        double mathTwo = machine * 10 ;
+        return round.format(mathTwo-mathOne);
+
+    }
 }
